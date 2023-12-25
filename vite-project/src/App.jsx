@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import banner_kids from "./components/assets/banner_kids.png"
 import banner_mens from "./components/assets/banner_mens.png"
 import banner_women from "./components/assets/banner_women.png"
+import Login from "./components/Pages/login";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -28,7 +29,8 @@ function App() {
             <Route path=":productId" element={<Product />}></Route>
           </Route>
           <Route path="/cart" element={<Cart />} />
-          <Route path="/login" element={<LoginSignup />} />
+          <Route path="/signup" element={<LoginSignup />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
       </BrowserRouter>
