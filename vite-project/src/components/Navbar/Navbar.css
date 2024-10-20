@@ -1,9 +1,11 @@
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding: 16px;
     box-shadow: 0 1px 3px -2px black;
 }
+
 
 .nav-logo{
     display: flex;
@@ -27,13 +29,39 @@
     font-weight: 500;
 }
 
-.nav-menu li{
+.nav-menu li {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     gap: 3px;
+    position: relative; /* Ensure positioning for z-index */
+}
+
+.nav-menu li.active {
+    border-bottom: 3px solid #ff4141;
+}
+
+.nav-menu a {
+    z-index: 1; /* Ensure the link is on top */
+    color: #626262; /* Add a color to ensure visibility */
+    text-decoration: none;
+}
+
+.nav-menu a:hover {
+    color: #ff4141; /* Add hover color effect */
+}
+
+
+
+
+.nav-menu li.active {
+    border-bottom: 3px solid #ff4141;
+}
+
+.nav-menu a {
+    text-decoration: none;
 }
 
 .nav-menu hr{
@@ -47,7 +75,9 @@
 .nav-login-cart{
     display: flex;
     align-items: center;
-    gap: 45px;   
+    gap: 45px;  
+    cursor: pointer; 
+    position: relative;
 }
 
 .nav-login-cart button{

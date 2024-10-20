@@ -1,0 +1,1 @@
+export const API = "https://money-manager-backend-seven.vercel.app"
